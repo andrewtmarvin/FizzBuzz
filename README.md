@@ -1,6 +1,6 @@
 <h1>Fizz Buzz- PHP edition</h1>
 <h2>Description</h2>
-This is a simple program executed from the command line that solves the popular "fizz buzz" coding challenge. 
+<p>This is a simple program executed from the command line that solves the popular "fizz buzz" coding challenge.</p>
 <h2>Usage</h2>
-To execute, run FizzBuzz.php from the terminal followed by the positive integer you would like the program to use in generating the "fizz buzz" sequence.
-For instance, "php .\src\FizzBuzz.php 10" would run the algorithm over the range of integers from 1 to 10.
+<p>To execute, run FizzBuzz.php from the terminal followed by the positive integer you would like the program to use in generating the "fizz buzz" sequence.</p>
+<p>For instance, "php .\src\FizzBuzz.php 10" would run the algorithm over the range of integers from 1 to 10.</p>
