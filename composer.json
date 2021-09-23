@@ -1,0 +1,17 @@
+{
+    "name": "andrewtmarvin/fizzbuzz",
+    "description": "Simple PHP algorithm.",
+    "keywords": ["assessment", "modulus", "algorithm"],
+    "authors": [
+        {
+            "name": "Andrew Marvin",
+            "homepage": "https://www.andrewmarvin.dev/"
+        }
+    ],
+    "require": {
+
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
