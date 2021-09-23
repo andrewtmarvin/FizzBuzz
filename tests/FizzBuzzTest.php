@@ -14,14 +14,36 @@ class FizzBuzzTest extends TestCase {
     }
 
     public function testValidPositiveIntegerUserInput() {
-        $expected = null;
-        $actual = ValidateUserInput(["FizzBuzz.php", "1"]);
-        $this->assertEquals($actual, $expected);
+        $result = ValidateUserInput(["FizzBuzz.php", "1"]);
+        $this->assertNull($result);
     }
 
-    public function testOne() {
+    public function testIsMultipleOfThree() {
+        $result = IsMultipleOfThree(9);
+        $this->assertTrue($result);
+        $false_result = IsMultipleOfThree(4);
+        $this->assertFalse($false_result);
+    }
+
+    public function testIsMultipleOfFive() {
+        $result = IsMultipleOfFive(10);
+        $this->assertTrue($result);
+        $false_result = IsMultipleOfFive(4);
+        $this->assertFalse($false_result);
+    }
+
+    public function testIsMultipleOfFifteen() {
+        $result = IsMultipleOfFifteen(45);
+        $this->assertTrue($result);
+        $false_result = IsMultipleOfFifteen(4);
+        $this->assertFalse($false_result);
+    }
+
+    public function testIntegerRange() {
+        $user_input = 20;
+        $range = range(1, $user_input);
         $expected = "1 2 fizz 4 buzz fizz 7 8 fizz buzz 11 fizz 13 14 fizzbuzz 16 17 fizz 19 buzz";
-        $actual = $expected;
+        $actual = ConvertRangeToFizzBuzz($range);
         $this->assertEquals($expected, $actual);
     }
 }
