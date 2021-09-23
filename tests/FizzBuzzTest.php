@@ -3,7 +3,7 @@ use PHPUnit\Framework\TestCase;
 require_once "./src/FizzBuzzFunctions.php";
 
 class FizzBuzzTest extends TestCase {
-    public function testInvalidNegativeUserInput() {
+    public function testInvalidNegativeIntegerUserInput() {
         $this->expectException(Exception::class);
         ValidateUserInput(["FizzBuzz.php", -1]);
     }
@@ -13,7 +13,7 @@ class FizzBuzzTest extends TestCase {
         ValidateUserInput(["FizzBuzz.php", "one"]);
     }
 
-    public function testValidUserInput() {
+    public function testValidPositiveIntegerUserInput() {
         $expected = null;
         $actual = ValidateUserInput(["FizzBuzz.php", "1"]);
         $this->assertEquals($actual, $expected);
