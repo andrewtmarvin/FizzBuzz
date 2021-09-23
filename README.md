@@ -1,4 +1,4 @@
-<h1>Fizz Buzz- PHP edition</h1>
+<h1>Fizz Buzz</h1>
 <h2>Description</h2>
 <p>This is a simple program executed from the command line that solves the popular "fizz buzz" coding challenge.</p>
 <h2>Usage</h2>
