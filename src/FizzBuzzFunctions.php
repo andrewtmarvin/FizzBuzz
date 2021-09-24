@@ -44,3 +44,36 @@ function ConvertRangeToFizzBuzz($range) {
     });
     return trim($result);
 }
+
+function GenerateReport($converted_range) {
+    $report = $converted_range . PHP_EOL;
+    $fizz_count = 0;
+    $buzz_count = 0;
+    $fizzbuzz_count = 0;
+    $lucky_count = 0;
+    $integer_count = 0;
+    $range_items = explode(" ", $converted_range);
+    foreach ($range_items as $item) {
+        if ($item === "fizz") {
+            $fizz_count++;
+        }
+        else if ($item === "buzz") {
+            $buzz_count ++;
+        }
+        else if ($item == "fizzbuzz") {
+            $fizzbuzz_count ++;
+        } 
+        else if ($item === "lucky") {
+            $lucky_count ++;
+        }
+        else {
+            $integer_count ++;
+        }
+    }
+    $report = $report . "fizz: " . strval($fizz_count) . PHP_EOL;
+    $report = $report . "buzz: " . strval($buzz_count) . PHP_EOL;
+    $report = $report . "fizzbuzz: " . strval($fizzbuzz_count) . PHP_EOL;
+    $report = $report . "lucky: " . strval($lucky_count) . PHP_EOL;
+    $report = $report . "integer: " . strval($integer_count) . PHP_EOL;
+    return $report;
+}
