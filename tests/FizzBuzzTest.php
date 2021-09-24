@@ -39,7 +39,7 @@ class FizzBuzzTest extends TestCase {
         $this->assertFalse($false_result);
     }
 
-    public function testIntegerRange() {
+    public function testConvertRangeToFizzBuzz() {
         $user_input = 20;
         $range = range(1, $user_input);
         $expected = "1 2 fizz 4 buzz fizz 7 8 fizz buzz 11 fizz 13 14 fizzbuzz 16 17 fizz 19 buzz";

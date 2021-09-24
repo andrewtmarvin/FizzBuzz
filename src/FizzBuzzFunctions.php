@@ -33,7 +33,7 @@ function ConvertRangeToFizzBuzz($range) {
         }
     }
     $result = array_reduce($range, function ($carry, $item) {
-        return sprintf("%s %s ", $carry, $item);
+        return sprintf("%s %s", $carry, $item);
     });
     return trim($result);
 }
