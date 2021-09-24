@@ -1,5 +1,6 @@
-<?php
-function ValidateUserInput($argv) {
+<?php 
+declare(strict_types = 1);
+function ValidateUserInput(array $argv): void|Exception {
     if (count($argv) < 2) {
         throw new Exception("Please pass the script a number.");
     }
@@ -8,23 +9,23 @@ function ValidateUserInput($argv) {
     }
 };
 
-function IsMultipleOfThree($num) {
+function IsMultipleOfThree(int $num): bool {
     return $num % 3 === 0;
 }
 
-function IsMultipleOfFive($num) {
+function IsMultipleOfFive(int $num): bool {
     return $num % 5 === 0;
 }
 
-function IsMultipleOfFifteen($num) {
+function IsMultipleOfFifteen(int $num): bool {
     return $num % 15 === 0;
 }
 
-function HasThree($num) {
+function HasThree(int $num): bool {
     return str_contains(strval($num), "3") ? true : false; 
 }
 
-function ConvertRangeToFizzBuzz($range) {
+function ConvertRangeToFizzBuzz(array $range): string {
     foreach ($range as &$integer) {
         if (HasThree($integer)) {
             $integer = "lucky";
@@ -45,14 +46,14 @@ function ConvertRangeToFizzBuzz($range) {
     return trim($result);
 }
 
-function GenerateReport($converted_range) {
-    $report = $converted_range . PHP_EOL;
+function GenerateReport(string $fizzbuzzed_range): string {
+    $report = $fizzbuzzed_range . PHP_EOL;
     $fizz_count = 0;
     $buzz_count = 0;
     $fizzbuzz_count = 0;
     $lucky_count = 0;
     $integer_count = 0;
-    $range_items = explode(" ", $converted_range);
+    $range_items = explode(" ", $fizzbuzzed_range);
     foreach ($range_items as $item) {
         if ($item === "fizz") {
             $fizz_count++;
