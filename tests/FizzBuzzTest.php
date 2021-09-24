@@ -46,5 +46,12 @@ class FizzBuzzTest extends TestCase {
         $actual = ConvertRangeToFizzBuzz($range);
         $this->assertEquals($expected, $actual);
     }
+
+    public function testHasThree() {
+        $result = HasThree(13);
+        $this->assertTrue($result);
+        $false_result = HasThree(9);
+        $this->assertFalse($false_result);
+    }
 }
 ?>
