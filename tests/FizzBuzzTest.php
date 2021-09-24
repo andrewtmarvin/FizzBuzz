@@ -53,5 +53,17 @@ class FizzBuzzTest extends TestCase {
         $false_result = HasThree(9);
         $this->assertFalse($false_result);
     }
+
+    public function testGenerateReport() {
+        $expected = "1 2 lucky 4 buzz fizz 7 8 fizz buzz 11 fizz lucky 14 fizzbuzz 16 17 fizz 19 buzz
+        fizz: 4
+        buzz: 3
+        fizzbuzz: 1
+        lucky: 2
+        integer: 10";
+        $converted_range = "1 2 lucky 4 buzz fizz 7 8 fizz buzz 11 fizz lucky 14 fizzbuzz 16 17 fizz 19 buzz";
+        $actual = GenerateReport($converted_range);
+        $this->assertEquals($expected, $actual);
+    }
 }
 ?>
