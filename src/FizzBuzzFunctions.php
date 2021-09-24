@@ -1,6 +1,8 @@
-<?php 
-declare(strict_types = 1);
-function ValidateUserInput(array $argv): void|Exception {
+<?php
+
+declare(strict_types=1);
+function ValidateUserInput(array $argv)
+{
     if (count($argv) < 2) {
         throw new Exception("Please pass the script a number.");
     }
@@ -9,34 +11,36 @@ function ValidateUserInput(array $argv): void|Exception {
     }
 };
 
-function IsMultipleOfThree(int $num): bool {
+function IsMultipleOfThree(int $num): bool
+{
     return $num % 3 === 0;
 }
 
-function IsMultipleOfFive(int $num): bool {
+function IsMultipleOfFive(int $num): bool
+{
     return $num % 5 === 0;
 }
 
-function IsMultipleOfFifteen(int $num): bool {
+function IsMultipleOfFifteen(int $num): bool
+{
     return $num % 15 === 0;
 }
 
-function HasThree(int $num): bool {
-    return str_contains(strval($num), "3") ? true : false; 
+function HasThree(int $num): bool
+{
+    return str_contains(strval($num), "3") ? true : false;
 }
 
-function ConvertRangeToFizzBuzz(array $range): string {
+function ConvertRangeToFizzBuzz(array $range): string
+{
     foreach ($range as &$integer) {
         if (HasThree($integer)) {
             $integer = "lucky";
-        }
-        else if (IsMultipleOfFifteen($integer)) {
+        } else if (IsMultipleOfFifteen($integer)) {
             $integer = "fizzbuzz";
-        }
-        else if (IsMultipleOfFive($integer)) {
+        } else if (IsMultipleOfFive($integer)) {
             $integer = "buzz";
-        }
-        else if (IsMultipleOfThree($integer)) {
+        } else if (IsMultipleOfThree($integer)) {
             $integer = "fizz";
         }
     }
@@ -46,7 +50,8 @@ function ConvertRangeToFizzBuzz(array $range): string {
     return trim($result);
 }
 
-function GenerateReport(string $fizzbuzzed_range): string {
+function GenerateReport(string $fizzbuzzed_range): string
+{
     $report = $fizzbuzzed_range . PHP_EOL;
     $fizz_count = 0;
     $buzz_count = 0;
@@ -57,18 +62,14 @@ function GenerateReport(string $fizzbuzzed_range): string {
     foreach ($range_items as $item) {
         if ($item === "fizz") {
             $fizz_count++;
-        }
-        else if ($item === "buzz") {
-            $buzz_count ++;
-        }
-        else if ($item == "fizzbuzz") {
-            $fizzbuzz_count ++;
-        } 
-        else if ($item === "lucky") {
-            $lucky_count ++;
-        }
-        else {
-            $integer_count ++;
+        } else if ($item === "buzz") {
+            $buzz_count++;
+        } else if ($item == "fizzbuzz") {
+            $fizzbuzz_count++;
+        } else if ($item === "lucky") {
+            $lucky_count++;
+        } else {
+            $integer_count++;
         }
     }
     $report = $report . "fizz: " . strval($fizz_count) . PHP_EOL;
