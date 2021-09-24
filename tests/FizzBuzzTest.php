@@ -42,13 +42,13 @@ class FizzBuzzTest extends TestCase {
     public function testConvertRangeToFizzBuzz() {
         $user_input = 20;
         $range = range(1, $user_input);
-        $expected = "1 2 fizz 4 buzz fizz 7 8 fizz buzz 11 fizz 13 14 fizzbuzz 16 17 fizz 19 buzz";
+        $expected = "1 2 lucky 4 buzz fizz 7 8 fizz buzz 11 fizz lucky 14 fizzbuzz 16 17 fizz 19 buzz";
         $actual = ConvertRangeToFizzBuzz($range);
         $this->assertEquals($expected, $actual);
     }
 
     public function testHasThree() {
-        $result = HasThree(13);
+        $result = HasThree(3);
         $this->assertTrue($result);
         $false_result = HasThree(9);
         $this->assertFalse($false_result);
