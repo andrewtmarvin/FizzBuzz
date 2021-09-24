@@ -20,9 +20,16 @@ function IsMultipleOfFifteen($num) {
     return $num % 15 === 0;
 }
 
+function HasThree($num) {
+    return str_contains(strval($num), "3") ? true : false; 
+}
+
 function ConvertRangeToFizzBuzz($range) {
     foreach ($range as &$integer) {
-        if (IsMultipleOfFifteen($integer)) {
+        if (HasThree($integer)) {
+            $integer = "lucky";
+        }
+        else if (IsMultipleOfFifteen($integer)) {
             $integer = "fizzbuzz";
         }
         else if (IsMultipleOfFive($integer)) {
